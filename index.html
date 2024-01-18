@@ -12,49 +12,9 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script>
-			function openWindow1() {
-				alert('Hello, this is an alert!');
-			}
-
-			function openWindow2() {
-				console.log("testsasdf");
-				window.open("app-settings:");
-			}
-
 			function openWindow3() {
 				window.open("App-Prefs://root=WIFI");
 			}
-
-			function openWindow4() {
-				window.open("app-settings://");
-			}
-
-			function openWindow5() {
-				webkit.messageHandlers.outLink.postMessage("test");
-				window.location.href = 'App-Prefs:root=WIFI';
-			}
-
-
-			// function openNaver() {
-			// 	webkit.messageHandlers.outLink.postMessage("test2");
-			// 	window.open("https://www.naver.com");
-			// }
-
-			function openNaver() {
-				webkit.messageHandlers.outLink.postMessage("test2");
-				window.open("https://www.naver.com");
-			}
-
-			window.onload = function() {
-				document.getElementById("button2").addEventListener("click", openNaver);
-			};
-
-
-
-			var redirect = function() {
-				window.location.href = "prefs:root=Settings";
-			}
-
 
 		</script>
 	</head>
@@ -67,37 +27,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-		<button onclick="openWindow1()">Open Window 1</button>
-
-		<button onclick="openWindow2()">Open Window 2</button>
-
 		<button onclick="openWindow3()">Open Window 3</button>
-
-		<button onclick="openWindow4()">Open Window 4</button>
-
-		<button onclick="openWindow5()">Open Window 5</button>
-
-		<button onclick="openNaver()">Open Naver</button>
-
-		<input type="button" onclick="redirect()" value="Redirect">
-
-
-		<button id="button2">Open Window 2</button>
-
-
-		<a href="App-Prefs://prefs:root"> Settings menu </a>
-
-		<a href="App-Prefs://prefs:any_string"> Settings menu2 </a>
-
-		<a href="App-Prefs:root=WIFI">Open Wi-Fi Settings</a>m
-
-
-		<a href="prefs://">prefs://</a>
-
-		<a href="prefs:root=General">prefs:root=General</a>
-
-
-		<a href="https://www.naver.com">naver.com</a>
 
 	</body>
 </html>
