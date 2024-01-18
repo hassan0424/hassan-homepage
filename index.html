@@ -35,10 +35,25 @@
 			}
 
 
+			// function openNaver() {
+			// 	webkit.messageHandlers.outLink.postMessage("test2");
+			// 	window.open("https://www.naver.com");
+			// }
+
 			function openNaver() {
 				webkit.messageHandlers.outLink.postMessage("test2");
 				window.open("https://www.naver.com");
 			}
+
+			window.onload = function() {
+				document.getElementById("button2").addEventListener("click", openWindow2);
+			};
+
+
+
+
+
+
 		</script>
 	</head>
 	<body class="is-preload">
@@ -61,6 +76,8 @@
 		<button onclick="openWindow5()">Open Window 5</button>
 
 		<button onclick="openNaver()">Open Naver</button>
+
+		<button id="button2">Open Window 2</button>
 
 
 		<a href="App-Prefs://prefs:root"> Settings menu </a>
